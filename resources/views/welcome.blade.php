@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Strona główna</a>
+                        <a href="{{ url('/home') }}">Mój profil</a>
                     @else
                         <a href="{{ route('login') }}">Logowanie</a>
 
@@ -79,27 +79,11 @@
                 </div>
             @endif
 
-            <?php
-
-            $baza=mysqli_connect("localhost","Patryk","secret","passwordkeeper");
-
-            if (mysqli_connect_errno())
-
-            echo "Wystąpił błąd połączenia z bazą";
-
-            $wynik = mysqli_query($baza,"SELECT * FROM users");
-
-            echo"$wynik'.witaj na stronie";
-
-            mysqli_close($baza);
-
-            ?>
-
 
 
             <div class="content">
                 <div class="title m-b-md">
-                    Panel logowania
+                    Strona główna
                 </div>
 
                 <div class="links">
